@@ -1,0 +1,76 @@
+MERN Stack
+
+Nodejs for the backend 
+
+initialize as npm init -y
+install required packages like
+npm install express
+npm install dotenv
+npm install -g nodemon
+
+make an express app to listen to requests or give responses
+
+app.listen to listen to request
+app.get to give response
+others include post,patch, etc
+app.use as a middleware that run everytime a request is made
+res.json to send response in json format
+
+require("dotenv").config() at top
+dotenv to use environment variables as process.env.VAR
+
+use postman to send requests
+
+create separate file for routes in routes folder
+use express.Router() in it
+export it as module.exports
+require it in main js file 
+use it as app.use('/api/workouts/',(workoutRoutes))
+
+Mongodb atlas for cloud db storage
+Mongoose is module that allows to read and write to db and provide schema and models to structure the data
+Create a new db in mongodb cloud, set username and password, set ip address and connect it thorugh the code to your program 
+Use mongoose.connect().then().catch() for this purpose.
+
+make model and schema using mongoose
+make separate folder for it 
+in .js file, require mongoose and use mongoose.Schema
+make new schema and set timestamps
+export mongoose.model
+post by workout.create({})
+res.status(200).json(workout)
+else
+give response as error.message 
+
+make controller for different controller functions
+all functions related to crud operations are here
+export them as object and use them in routers file
+res.status().json()
+async await
+
+npx create-react-app frontend to make a frontend folder 
+delete unnecessary files like app.cs, just keep app.js,index.css,index.js
+inside index.js remove unnecessary imports and in app.js remove imports and what's inside of div with class=app
+npm install react-router-dom
+make pages and components and import them in app.js 
+use them under BrowserRouter
+
+fetch data from api
+useEffect and useState
+res = use fetch('/api/workout')
+convert it to json as res.json
+if res.ok then setWorkouts
+
+display it using {workouts&&workouts.map(workout)=>()}
+
+make a form to post new workout
+return a form with some useState and posting data to the database
+
+
+
+
+
+
+
+
+ 
